@@ -25,17 +25,18 @@ bash run.sh
 
 ## Other issue:
 
-1. Is there any requirement for the wav file ?
-	No, any sampling rate, single/dual channel is fine. 
+### Is there any requirement for the wav file ?
+No, any sampling rate, single/dual channel is fine. 
 
-2. Requirement
-	Pytorch, soundfile package
+### Requirement
+Pytorch, soundfile package
 
-3. Threshold setting
-	It depend on the different dataset. Just for suggestion: usually the score between 0 to -1.0 can be viewed as the same speaker, score small than -1.0 can be viewed as different speaker.
+### Threshold setting
+It depend on the dataset. Just for suggestion: usually the score between 0 to -1.0 can be viewed as the same speaker, score small than -1.0 can be viewed as different speaker.
 
-4. Reference
-	Please check their paper for more details:
+### Reference
+Please check their paper for more details:
+
 	[1] _In defence of metric learning for speaker recognition_
 	```
 	@inproceedings{chung2020in,
