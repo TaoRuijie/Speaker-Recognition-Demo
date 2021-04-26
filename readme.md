@@ -7,7 +7,7 @@ Speaker verification is to judge if two utterance belong to the same speaker bas
 ## How to use:
 ### Input: 
   
-  Put the wav files into the `data` folder, change the name in `run.sh` file. One is for enrollment_audio, another is for test_audio.
+  Put the wav files you want to verify into the `data` folder, change the `enrollment_audio` and `test_audio` in `run.sh` file.
 
 ### Commend:
 
