@@ -24,9 +24,9 @@ bash run.sh
 
 ## Other issue:
 
-- Is there any requirement for the wav file ?
+- Audio file format
 
-	No, any sampling rate, single/dual channel is fine. 
+	Current only wav, any sampling rate, single/dual channel is fine. 
 
 - Requirement
 
