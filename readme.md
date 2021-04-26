@@ -20,6 +20,7 @@ bash run.sh
   The score is the speaker verification score between two utterances, the score is higher, the utterance tends to come from the same speaker (The highest is 0.0)
 
   For instance, the score for `A1.wav` and `A2.wav` is -0.8122 (Same speaker)
+  
   		the score for `A1.wav` and `B1.wav` is -1.3041 (Different speaker)
 
 ## Other issue:
@@ -45,14 +46,6 @@ bash run.sh
 	  title={In defence of metric learning for speaker recognition},
 	  author={Chung, Joon Son and Huh, Jaesung and Mun, Seongkyu and Lee, Minjae and Heo, Hee Soo and Choe, Soyeon and Ham, Chiheon and Jung, Sunghwan and Lee, Bong-Jin and Han, Icksang},
 	  booktitle={Interspeech},
-	  year={2020}
-	}
-	```
-	```
-	@article{heo2020clova,
-	  title={Clova baseline system for the {VoxCeleb} Speaker Recognition Challenge 2020},
-	  author={Heo, Hee Soo and Lee, Bong-Jin and Huh, Jaesung and Chung, Joon Son},
-	  journal={arXiv preprint arXiv:2009.14153},
 	  year={2020}
 	}
 	```
