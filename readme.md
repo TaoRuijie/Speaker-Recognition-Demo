@@ -4,7 +4,6 @@ This code is modified based on https://github.com/clovaai/voxceleb_trainer
 
 The pretrain model used here is also the model that repositories provided.
 
-## Introduction:
 Speaker verification is to judge if two utterance belong to the same speaker based on the each person's unique voiceprint 
 
 ## How to use:
@@ -25,19 +24,22 @@ bash run.sh
 
 ## Other issue:
 
-### Is there any requirement for the wav file ?
+- Is there any requirement for the wav file ?
+- 
 No, any sampling rate, single/dual channel is fine. 
 
-### Requirement
+- Requirement
+- 
 Pytorch, soundfile package
 
-### Threshold setting
+- Threshold setting
+- 
 It depend on the dataset. Just for suggestion: usually the score between 0 to -1.0 can be viewed as the same speaker, score small than -1.0 can be viewed as different speaker.
 
-### Reference
+- Reference
+- 
 Please check their paper for more details:
 
-	[1] _In defence of metric learning for speaker recognition_
 	```
 	@inproceedings{chung2020in,
 	  title={In defence of metric learning for speaker recognition},
@@ -46,8 +48,6 @@ Please check their paper for more details:
 	  year={2020}
 	}
 	```
-
-	[2] _Clova baseline system for the VoxCeleb Speaker Recognition Challenge 2020_
 	```
 	@article{heo2020clova,
 	  title={Clova baseline system for the {VoxCeleb} Speaker Recognition Challenge 2020},
