@@ -30,6 +30,10 @@ bash run.sh
 - Requirements
 
 	Pytorch, soundfile package
+	
+- GPU
+	
+	This is just the demo code, so the default setting is to use cpu only. It will not be very slow.
 
 - Threshold setting
 
