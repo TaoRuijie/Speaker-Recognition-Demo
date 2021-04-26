@@ -8,15 +8,17 @@ The pretrain model used here is also the model that repositories provided.
 Speaker verification is to judge if two utterance belong to the same speaker based on the each person's unique voiceprint 
 
 ## How to use:
-- Input: 
+### Input: 
   
   Put the wav files into the data folder, change the name in run.sh file. One is for enrollment_audio, another is for test_audio.
+
+### Commend:
 
 ```
 bash run.sh
 ```
 
-- Output: 
+### Output: 
   
   The score is the speaker verification score between two utterance, the score is higher, the utterance tends to come from the same speaker (The highest is 0.0)
 
