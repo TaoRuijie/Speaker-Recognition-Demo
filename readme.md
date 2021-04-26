@@ -29,7 +29,7 @@ bash run.sh
 
 	Current only wav, any sampling rate, single/dual channel is fine. 
 
-- Requirement
+- Requirements
 
 	Pytorch, soundfile package
 
