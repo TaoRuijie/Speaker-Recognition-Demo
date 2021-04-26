@@ -17,11 +17,9 @@ bash run.sh
 
 ### Output: 
   
-  The score is the speaker verification score between two utterances, the score is higher, the utterance tends to come from the same speaker (The highest is 0.0).  For instance:
-
-  Score for `A1.wav` and `A2.wav` is -0.8122 (Same speaker)
-                
-  Score for `A1.wav` and `B1.wav` is -1.3041 (Different speaker)
+  The score is the speaker verification score between two utterances, the score is higher, the utterance tends to come from the same speaker (The highest is 0.0).  
+  
+  For instance: Score for `A1.wav` and `A2.wav` is -0.8122 (Same speaker).  Score for `A1.wav` and `B1.wav` is -1.3041 (Different speaker).
 
 ## Other issue:
 
