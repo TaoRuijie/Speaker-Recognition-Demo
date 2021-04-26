@@ -19,25 +19,25 @@ bash run.sh
 
 ### Output: 
   
-  The score is the speaker verification score between two utterance, the score is higher, the utterance tends to come from the same speaker (The highest is 0.0)
+  The score is the speaker verification score between two utterances, the score is higher, the utterance tends to come from the same speaker (The highest is 0.0)
 
 
 ## Other issue:
 
-- Is there any requirement for the wav file ?
-- 
+1. Is there any requirement for the wav file ?
+
 No, any sampling rate, single/dual channel is fine. 
 
-- Requirement
-- 
+2. Requirement
+
 Pytorch, soundfile package
 
-- Threshold setting
-- 
+3. Threshold setting
+
 It depend on the dataset. Just for suggestion: usually the score between 0 to -1.0 can be viewed as the same speaker, score small than -1.0 can be viewed as different speaker.
 
-- Reference
-- 
+4. Reference
+
 Please check their paper for more details:
 
 	```
