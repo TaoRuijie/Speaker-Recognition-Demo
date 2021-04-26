@@ -1,8 +1,6 @@
 # Speaker Verification Demo
 
-This code is modified based on https://github.com/clovaai/voxceleb_trainer 
-
-The pretrain model used here is also the model that repositories provided.
+This code is modified based on https://github.com/clovaai/voxceleb_trainer , include the pretrain model.
 
 Speaker verification is to judge if two utterance belong to the same speaker based on the each person's unique voiceprint 
 
