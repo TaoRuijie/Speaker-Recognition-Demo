@@ -24,21 +24,21 @@ bash run.sh
 
 ## Other issue:
 
-1. Is there any requirement for the wav file ?
+- Is there any requirement for the wav file ?
 
-No, any sampling rate, single/dual channel is fine. 
+	No, any sampling rate, single/dual channel is fine. 
 
-2. Requirement
+- Requirement
 
-Pytorch, soundfile package
+	Pytorch, soundfile package
 
-3. Threshold setting
+- Threshold setting
 
-It depend on the dataset. Just for suggestion: usually the score between 0 to -1.0 can be viewed as the same speaker, score small than -1.0 can be viewed as different speaker.
+	It depend on the dataset. Just for suggestion: usually the score between 0 to -1.0 can be viewed as the same speaker, score small than -1.0 can be viewed as different speaker.
 
-4. Reference
+- Reference
 
-Please check their paper for more details:
+	Please check their paper for more details:
 
 	```
 	@inproceedings{chung2020in,
