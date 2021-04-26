@@ -9,6 +9,7 @@ Speaker verification is to judge if two utterance belong to the same speaker bas
 
 ## How to use:
 - Input: 
+  
   Put the wav files into the data folder, change the name in run.sh file. One is for enrollment_audio, another is for test_audio.
 
 ```
@@ -16,6 +17,7 @@ bash run.sh
 ```
 
 - Output: 
+  
   The score is the speaker verification score between two utterance, the score is higher, the utterance tends to come from the same speaker (The highest is 0.0)
 
 
