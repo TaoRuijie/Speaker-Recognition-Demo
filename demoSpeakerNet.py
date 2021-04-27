@@ -1,4 +1,4 @@
-import argparse, numpy, soundfile, importlib, warnings, torch, os
+import argparse, numpy, soundfile, importlib, warnings, torch, os, glob, tabulate, pandas
 
 def loadWAV(filename):
 	audio, sr = soundfile.read(filename)
@@ -22,31 +22,37 @@ def loadPretrain(model, pretrain_model):
 	self_state = model.state_dict()
 	return model
 
-# Definition
-warnings.filterwarnings("ignore")
-parser = argparse.ArgumentParser(description = "DemoSpeakerRecognition");
-parser.add_argument('--enrollment_audio',   type=str,   default=None,   help='Enrollment audio path')
-parser.add_argument('--test_audio',         type=str,   default=None,   help='Test audio path')
-args = parser.parse_args()
-
 # Load Model
+warnings.filterwarnings("ignore")
 SpeakerNetModel = importlib.import_module('models.ResNetSE34V2').__getattribute__('MainModel')
 model = SpeakerNetModel()
 model = loadPretrain(model, 'models/pretrain.model')
 
 # Load Wav
-utt_enroll = loadWAV(args.enrollment_audio)
-utt_test   = loadWAV(args.test_audio)
+enroll_audios = glob.glob('data/enroll/*.wav')
+test_audios       = glob.glob('data/test/*.wav')
+
+utt_enroll_dict = {}
+utt_test_dict = {}
+for audio in enroll_audios:
+	utt_enroll_dict[audio] = loadWAV(audio)
+for audio in test_audios:
+	utt_test_dict[audio] = loadWAV(audio)
 
 # Feed data into model, compute the score
 model.eval()
+
 with torch.no_grad():
-	feat_enroll = model(utt_enroll).detach()
-	feat_test   = model(utt_test).detach()
-	feat_enroll = torch.nn.functional.normalize(feat_enroll, p=2, dim=1)
-	feat_test   = torch.nn.functional.normalize(feat_test, p=2, dim=1)
-	score = - torch.nn.functional.pairwise_distance(feat_enroll.unsqueeze(-1), feat_test.unsqueeze(-1).transpose(0,2)).detach().numpy()
-	
-print("Enroll_audio:                  %s\n\
-Test_audio:                    %s\n\
-Score (Higher is better):      %.4f"%(args.enrollment_audio, args.test_audio, score))
+	for audio in test_audios:
+		score_matrix = {}
+		feat_test   = model(utt_test_dict[audio]).detach()
+		feat_test   = torch.nn.functional.normalize(feat_test, p=2, dim=1)
+		for enroll_audio in enroll_audios:
+			feat_enroll = model(utt_enroll_dict[enroll_audio]).detach()
+			feat_enroll = torch.nn.functional.normalize(feat_enroll, p=2, dim=1)
+			score = [float(numpy.round(- torch.nn.functional.pairwise_distance(feat_enroll.unsqueeze(-1), feat_test.unsqueeze(-1).transpose(0,2)).detach().numpy(), 4))]
+			score_matrix[enroll_audio.split('/')[-1].split('.')[0]] = score
+		score_matrix = {k: v for k, v in sorted(score_matrix.items(), key=lambda item: item[1], reverse = True)}
+		score_matrix = pandas.DataFrame.from_dict(score_matrix, orient='index', columns=[audio.split('/')[-1].split('.')[0]])
+		print("\nSpeaker recognition results for the test audio %s:" %(audio.split('/')[-1].split('.')[0]))
+		print(score_matrix)
