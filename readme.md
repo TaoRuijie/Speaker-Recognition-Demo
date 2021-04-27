@@ -3,7 +3,7 @@
 This code is modified based on https://github.com/clovaai/voxceleb_trainer , include the pretrain model.
 
 ## What it can do ?
-This code can output the recognition score between the test utterance (the utterance you want to know the ID) and enrollment utterances (the utterance you have registed the ID) based on the person's unique voiceprint.
+This code can output the recognition scores between the test utterance (the utterance you want to know the ID) and all enrollment utterances (the utterance you have registed the ID) based on the person's unique voiceprint.
 
 ## How to use ?
 ### Input: 
