@@ -26,6 +26,7 @@ python demoSpeakerNet.py
 Speaker recognition results for the test audio A1:
 
 |    |     A1 |
+| -- | ------ |
 | A2 | -0.8122|
 | D2 | -1.2551|
 | D1 | -1.2641|
