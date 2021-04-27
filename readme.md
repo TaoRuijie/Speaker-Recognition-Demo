@@ -20,9 +20,9 @@ python demoSpeakerNet.py
   
   The score is the speaker recognition score between the test utterance and all enrollment utterances, the score is higher, the utterance tends to come from the same speaker (The highest is 0.0).  
   
-  For instance: There are 7 audios in enrollment folder and 1 audio in test folder. You can get the following output:
+  For instance: There are 7 audios in `data/enrollment_audio` and 1 audio in `data/test_audio`. You can get the following output:
 
->
+
 |    |     A1 |
 | -- | ------ |
 | A2 | -0.8122|
