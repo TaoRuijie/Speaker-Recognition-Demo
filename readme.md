@@ -7,11 +7,10 @@ This code can output the recognition scores between the test utterance (the utte
 
 ## How to use ?
 
-### Clone the code & Dependence:
+### Clone the code:
 
 ```
 git clone https://github.com/TaoRuijie/SpeakerRecognitionDemo
-pip install -r requirements.txt
 ```
 
 ### Input: 
