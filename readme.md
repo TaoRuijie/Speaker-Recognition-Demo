@@ -2,9 +2,10 @@
 
 This code is modified based on https://github.com/clovaai/voxceleb_trainer , include the pretrain model.
 
-Speaker verification is to judge if two utterance belong to the same speaker based on the each person's unique voiceprint 
+## What it can do ?
+This code can output the verification score between two utterances (wav audio file) to judge if they belong to the same speaker based on the person's unique voiceprint.
 
-## How to use:
+## How to use ?
 ### Input: 
   
   Put the wav files you want to verify into the `data` folder, change the `enrollment_audio` and `test_audio` in `run.sh` file.
@@ -30,6 +31,10 @@ bash run.sh
 - Requirements
 
 	Pytorch, soundfile package
+	
+- GPU
+	
+	This is just the demo code, so the default setting is to use cpu only. It will not be very slow.
 
 - Threshold setting
 
