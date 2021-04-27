@@ -34,6 +34,11 @@ Speaker recognition results for the test audio A1:
 | B2 | -1.3246|
 | C1 | -1.3756|
 
+| Method  | LFW(%) | CFP-FP(%) | AgeDB-30(%) |  
+| ------- | ------ | --------- | ----------- |  
+|  Ours   | 99.80+ | 98.0+     | 98.20+      |   
+
+
 
 	
 `A1` and `A2` come from the same speaker, so they have the highest score.
