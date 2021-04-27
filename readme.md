@@ -59,7 +59,7 @@ python demoSpeakerNet.py
 
 - Threshold setting
 
-	It depend on the dataset. Just for suggestion: usually the score between 0 to -1.0 can be viewed as the same speaker, score small than -1.0 can be viewed as different speaker.
+	It depends on the dataset. Just for suggestion: usually the score between 0 to -1.0 can be viewed as the same speaker, score small than -1.0 can be viewed as different speaker.
 
 - Reference
 
