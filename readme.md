@@ -22,7 +22,6 @@ python demoSpeakerNet.py
   
   For instance: There are 7 audios in enrollment folder and 1 audio in test folder. You can get the following output:
 	
-```	
 Speaker recognition results for the test audio A1:
 
 |    |     A1 |
@@ -34,7 +33,6 @@ Speaker recognition results for the test audio A1:
 | C2 | -1.3062|
 | B2 | -1.3246|
 | C1 | -1.3756|
-```
 
 	
 `A1` and `A2` come from the same speaker, so they have the highest score.
