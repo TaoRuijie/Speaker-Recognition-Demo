@@ -8,7 +8,7 @@ This code can output the recognition scores between the test utterance (the utte
 ## How to use ?
 ### Input: 
   
-  Put the wav files you have registed in the `data/enrollment_audio` folder. Put the wav file you want to test in `data/test_audio` folder (You can put multi test audio file, each test audio will generate one score lists).
+  Put the wav files you have registed in the `data/enrollment_audio` folder. Put the wav file you want to test in `data/test_audio` folder (You can put multiple test audio file, each test audio will generate one score list).
 
 ### Commend:
 
