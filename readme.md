@@ -51,7 +51,7 @@ python demoSpeakerNet.py
 
 - Requirements
 
-	Pytorch, pandas, soundfile package
+	Pytorch (>=1.6.0), pandas, soundfile package
 	
 - GPU
 	
