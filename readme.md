@@ -6,6 +6,14 @@ This code is modified based on https://github.com/clovaai/voxceleb_trainer , inc
 This code can output the recognition scores between the test utterance (the utterance you want to know the ID) and all enrollment utterances (the utterance you have registed the ID) based on the person's unique voiceprint.
 
 ## How to use ?
+
+### Clone the code & Dependence:
+
+```
+git clone https://github.com/TaoRuijie/SpeakerRecognitionDemo
+pip install -r requirements.txt
+```
+
 ### Input: 
   
   Put the wav files you have registed in the `data/enrollment_audio` folder. Put the wav file you want to test in `data/test_audio` folder (You can put multiple test audio file, each test audio will generate one score list).
