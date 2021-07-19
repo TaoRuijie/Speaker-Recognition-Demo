@@ -1,6 +1,6 @@
 # Speaker Recognition Demo
 
-This code is modified based on https://github.com/clovaai/voxceleb_trainer , include the pretrain model.
+This code is modified based on https://github.com/clovaai/voxceleb_trainer , include the pretrain model. This is just a simply version of that repository.
 
 ## What it can do ?
 This code can output the recognition scores between the test utterance (the utterance you want to know the the speaker id) and all enrollment utterances (the utterances you have registed and already known the speaker id) based on the person's unique voiceprint.
