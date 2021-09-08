@@ -17,7 +17,7 @@ git clone https://github.com/TaoRuijie/SpeakerRecognitionDemo
   
   Put the wav files you have registed in the `data/enrollment_audio` folder. Put the wav file you want to test in `data/test_audio` folder (You can put multiple test audio file, each test audio will generate one score list).
 
-### Commend:
+### Command:
 
 ```
 python demoSpeakerNet.py
